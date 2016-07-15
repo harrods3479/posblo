@@ -1,6 +1,5 @@
 default: &default
   adapter: postgresql
-  host: localhost
   encoding: utf8
   #username: rails_admin
   #password: P@ssw0rd
@@ -9,14 +8,17 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
   database: rails_db
 
 test:
   <<: *default
+  host: localhost
   database: rails_db
 
 production:
   <<: *default
-  database: rails_db
-  username: pos
-  password: <%= ENV['POS_DATABASE_PASSWORD'] %>
+  host: ec2-54-235-255-27.compute-1.amazonaws.com
+  database: d1mcu5v1lou2dq
+  username: ypurvoltmixdoi
+  password: WYMsHmDFuszyoIH1fD58LV9dGj
