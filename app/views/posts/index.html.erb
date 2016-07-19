@@ -2,7 +2,9 @@
 
 <table>
   <tr>
+    <th>就業日</th>
     <th>タイトル</th>
+    <th>就業時間</th>
     <th>内容</th>
     <th></th>
     <th></th>
@@ -10,7 +12,9 @@
 
   <% @posts.each do |post| %>
     <tr>
+      <td><%= post.work_date.strftime("%Y/%m/%d") %></td>
       <td><%= post.title %></td>
+      <td><%= post.work_time_start.strftime("%H:%M") %>〜<%= post.work_time_end.strftime("%H:%M") %></td>
       <td><%= post.body %></td>
       <td><%= link_to '詳細', post %></td>
       <td><%= link_to '編集', edit_post_path(post) %></td>

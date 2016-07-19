@@ -1,7 +1,17 @@
 <div class="post_info">
   <p>
+    <strong>就業日：</strong>
+    <%= @post.work_date.strftime("%Y/%m/%d") %>
+  </p>
+
+  <p>
     <strong>タイトル：</strong>
     <%= @post.title %>
+  </p>
+
+  <p>
+    <strong>就業時間：</strong>
+    <%= @post.work_time_start.strftime("%H:%M") %>〜<%= @post.work_time_end.strftime("%H:%M") %>
   </p>
  
   <p>
